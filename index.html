@@ -21,40 +21,45 @@
     />
     <title>Tukay - Dawn Of Sapa</title>
   </head>
-  <body>
+  <body class="bg-purple-300 md:bg-yellow-300 lg:bg-blue-300">
     <main class="h-dvh">
       <header>
         <nav
-          class="flex flex-row items-center space-x-6 justify-between py-5 mx-[100px]"
+          class="flex flex-row items-center justify-between mx-[30px] lg:gap-6 py-2 lg:py-4 lg:mx-[100px]"
         >
           <div>
             <!-- logo -->
             <a href="/">
               <figure>
-                <img src="/images/logo.png" alt="logo" draggable="false" />
+                <img
+                  src="/images/logo.png"
+                  class="max-w-[69px] md:max-w-[80px] w-fit lg:max-w-[100px]"
+                  alt="logo"
+                  draggable="false"
+                />
               </figure>
             </a>
           </div>
           <!-- links -->
-          <div>
-            <ul class="flex flex-row items-center gap-[52px]">
+          <div class="hidden md:block">
+            <ul class="flex flex-row items-center gap-8 lg:gap-[52px]">
               <li
-                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-black text-base lg:text-[18px] lg:leading-[26px]"
+                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-black text-[15px] lg:text-[18px] lg:leading-[26px]"
               >
                 <a href="#"> Home </a>
               </li>
               <li
-                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-base lg:text-[18px] lg:leading-[26px]"
+                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-[15px] lg:text-[18px] lg:leading-[26px]"
               >
                 <a href="#"> Service </a>
               </li>
               <li
-                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-base lg:text-[18px] lg:leading-[26px]"
+                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-[15px] lg:text-[18px] lg:leading-[26px]"
               >
                 <a href="#"> Features </a>
               </li>
               <li
-                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-base lg:text-[18px] lg:leading-[26px]"
+                class="font-medium hover:text-[#474747]/70 transition-all duration-300 text-[#474747] text-[15px] lg:text-[18px] lg:leading-[26px]"
               >
                 <a href="#">Contact </a>
               </li>
@@ -62,13 +67,46 @@
           </div>
 
           <!-- quick buttons -->
-          <div>
-            <button class="bg-primary lg:px-[20px] lg:py-3 lg:rounded-[15px]">
+          <div
+            class="hidden md:flex flex-row items-center2 md:gap-[20px] lg:gap-[36px]"
+          >
+            <!-- login -->
+            <button
+              class="py-2 w-[90px] rounded-lg px-[15px] text-base bg-primary font-space transition-all duration-300 active:scale-95 text-center text-white lg:px-[20px] lg:py-3 lg:rounded-[15px] lg:leading-[24px] lg:text-[18px] font-medium lg:w-[118px]"
+            >
               Login
             </button>
+            <button
+              class="py-2 w-[90px] rounded-lg px-[15px] text-base border-primary border-solid border bg-transparent font-space transition-all duration-300 active:scale-95 text-center text-primary lg:px-[20px] lg:py-3 lg:rounded-[15px] lg:leading-[24px] lg:text-[18px] font-medium lg:w-[118px]"
+            >
+              Sign up
+            </button>
+          </div>
+
+          <!-- three dots -->
+          <div
+            id="nav"
+            class="relative md:hidden flex flex-col gap-[7px] transition-all duration-300 active:scale-95 *:w-6 *:rounded-lg *:h-0.5 *:bg-primary"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </nav>
+        <div class="hidden menu mx-auto bg-red-400 w-[400px] h-[400px]"></div>
       </header>
     </main>
+
+    <!-- <script src="./main.js"></script> -->
+    <script>
+      const btn = document.getElementById("nav");
+      const nav = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        nav.classList.toggle("flex");
+        nav.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

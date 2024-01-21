@@ -13,3 +13,8 @@ body {
   @apply bg-bg;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
