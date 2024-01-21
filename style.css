@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 * {
-  outline: 1px solid black;
+  outline: 1px solid red;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  @apply bg-bg;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
