@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
+        jar: ["Plus Jakarta Sans", "sans-serif"],
       },
     },
   },
