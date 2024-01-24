@@ -18,3 +18,23 @@ body {
   transform: rotate(90deg);
   transform: translateY(0px);
 }
+
+body::-webkit-scrollbar {
+  @apply w-0 md:w-1 bg-transparent;
+}
+
+body::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+body::-webkit-scrollbar-track-piece {
+  @apply bg-transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply transition-all duration-500 bg-primary rounded-full;
+}
